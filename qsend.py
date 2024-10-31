@@ -7,13 +7,13 @@ from argparse import ArgumentParser
 from pathlib import Path
 
 # mail server settings
-server_address = "smtp.mail.ru"
-server_port = 25
+server_address = "smtp.gmail.com"
+server_port = 587
 login, password = "login", "password" # TODO: set login & SMTP/IMAP password
 
 # message content
 msg = MIMEMultipart()
-msg['From'], msg['To'], msg['Subject'] = "from@mail.ru", "to@mail.ru", "quantumsend test" # TODO: set "FROM", "TO" and "SUBJECT"
+msg['From'], msg['To'], msg['Subject'] = "login@gmail.com", "recipient@gmail.com", "quantumsend test" # TODO: set "FROM", "TO" and "SUBJECT"
 msg.attach(MIMEText("some text", 'plain')) # TODO: replace "some text" with your message
 
 # file path parser
